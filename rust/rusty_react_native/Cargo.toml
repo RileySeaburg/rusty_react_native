@@ -1,0 +1,22 @@
+# Copyright (c) 2022 Evolving Software Corporation
+# 
+# This software is released under the MIT License.
+# https://opensource.org/licenses/MIT
+
+[package]
+name = "rusty_react_native"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "rusty_react_native"
+crate-type = ["cdylib", "staticlib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2.101"
+jni = { version = "0.19.0", optional= true, default-features = false }
+
+[features]
+default = ["jni"]
